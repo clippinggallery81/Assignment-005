@@ -36,6 +36,7 @@ for (let i = 0; i < copyButtons.length; i++) {
 
 // call button section 
 const callButtons = document.getElementsByClassName('call-btn');
+const cardTitle = document.getElementsByClassName('card-title');
 const subTitles = document.getElementsByClassName('card-sub-title');
 const coinCountDisplay = document.getElementById("coins");
 const coins = parseInt(coinCountDisplay.innerText);
@@ -47,6 +48,7 @@ for (let i = 0; i < callButtons.length; i++) {
     const callBtn = callButtons[i];
     const callTitle = subTitles[i];
     const number = helpLineNumbers[i];
+    const title = cardTitle[i];
 
     callBtn.addEventListener("click", function () {
         let coins = parseInt(coinCountDisplay.innerText);
@@ -63,7 +65,7 @@ for (let i = 0; i < callButtons.length; i++) {
             div.innerHTML = `
                 <div class="flex justify-between items-center mt-4 bg-[#FAFAFA] rounded-[8px] p-5">
                     <div>
-                        <h1 class="text-xl">${callTitle.innerText}</h1>
+                        <h1 class="text-xl">${title.innerText}</h1>
                         <p class="text-gray-500 mt-2">${number.innerText}</p>
                     </div>
                     <p class="text-xl">${date}</p>
